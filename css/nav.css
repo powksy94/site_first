@@ -1,0 +1,50 @@
+
+
+
+header {
+    display: flex;
+
+    
+    flex-direction: column;
+    padding: auto;
+    }
+
+
+div.connexion {
+    display: flex;
+    background-color: yellow;
+    width: 100%;
+    
+    
+}
+
+
+div.connexion ul {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    background-color: red;
+    list-style-type: none;
+    padding: 20px;
+    
+    
+}
+
+div.connexion ul li {
+    display: flex;
+    margin: 10px;
+}
+
+
+header ul.info_transports {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(210, 162, 72);
+    width: 60%;
+}
+
+header ul.info_transports li {
+    list-style-type: none;
+    margin: 10px;
+}
