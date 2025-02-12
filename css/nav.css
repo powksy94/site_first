@@ -1,31 +1,52 @@
 
 
 
-header {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  }
+
+main{
+  flex: 1; /* Permet au main de s'étendre pour remplir l'espace disponible */
+  background-image: url(/images/airport.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.vide {
+  min-height: 100vh;
+}
+
+.menu_nav {
+  display: none;
+}
+
+
+section.connexion {
     display: flex;
-
-    
-    flex-direction: column;
-    padding: auto;
-    }
-
-
-div.connexion {
-    display: flex;
-    background-color: yellow;
     width: 100%;
+    background-image: url(/images/roissy.jpg) ;
+    
     
     
 }
 
 
-div.connexion ul {
+div.connexion_langage{
+    
     display: flex;
     flex: 1;
     justify-content: end;
-    background-color: red;
     list-style-type: none;
-    padding: 20px;
+    height: 130px;
     
     
 }
@@ -36,15 +57,510 @@ div.connexion ul li {
 }
 
 
-header ul.info_transports {
+
+div.info_transports {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    background-color: rgb(210, 162, 72);
-    width: 60%;
+    background-image: url(/images/take_off.webp);
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position-y: -400px;
+        
+    
+    
 }
 
-header ul.info_transports li {
-    list-style-type: none;
-    margin: 10px;
+div.info_transports li {
+  list-style-type: none;
 }
+
+
+
+button.achats_billets{
+        background: transparent;
+        padding: 0;
+        color: #573c66;
+        border: none; /* Supprime la bordure */ 
+        text-align: center; /* Centre le texte */
+        display: inline-block; /* Permet de respecter la largeur et la hauteur */
+        margin: 4px 2px; /* Ajoute de l'espace autour du bouton */
+        cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+    
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f7f3f3;
+  flex-direction: row;
+  width: 50% ;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+
+
+
+
+.achats_billet:hover .dropdown-content {
+  display: block;
+}
+
+button.contact_box {
+  display: flex;
+  background: transparent;
+  padding: 0;
+  border: none; /* Supprime la bordure */ 
+  text-align: center; /* Centre le texte */
+  display: inline-block; /* Permet de respecter la largeur et la hauteur */
+  margin: 4px 2px; /* Ajoute de l'espace autour du bouton */
+  cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+  color: rgb(70, 52, 107);
+}
+
+
+div.info_transports {
+    list-style-type: none;
+    margin: 0%;
+    
+}
+
+
+
+
+section.popup_seat {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+div.contenu_siege {
+    position: absolute;
+    top: 30%;
+    background-color: white;
+    padding: 10px;
+    z-index: 9999999;
+    display: none;
+
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+.premiereclasse {
+    float: left;
+    flex-wrap: wrap;
+    
+}
+
+.premiereclasse input {
+    line-height: 30px;
+    margin: 10px ;
+    
+}
+
+
+
+label {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.language-selector select {
+    background: transparent;
+    border: none;
+}
+
+
+
+
+.image_background {
+  background-size: cover;
+  background-image: url(../images/large.png);
+  width: 140px; /* Rendre l'image de fond responsive */
+  height: 120px; /* S'assurer qu'elle occupe tout l'espace */
+  
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: transform 0.4s; /* Transition pour les transformations */
+}
+
+
+.navbaright {
+  display: none; /* Masquer le menu par défaut */
+  position: absolute;
+  top: 60px; /* Ajuster en fonction de la hauteur du menu burger */
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.connexion_langage {
+  display: flex; /* Utiliser flexbox pour l'alignement */
+  align-items: center; /* Centrer verticalement les éléments */
+  padding-left: 450px; /* Ajuster l'espacement à gauche */
+  list-style: none; /* Supprimer les puces */
+}
+
+div.burger { 
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/open.png);
+    background-size: cover;
+    display: none;
+}
+
+
+div.close {
+  display: none; /* Masquer le bouton de fermeture par défaut */
+}
+
+main div.boite {
+  width: 100%; /* S'assurer que la boîte utilise toute la largeur */
+}
+
+nav {
+  display: flex; /* Assurer l'affichage en flex */
+  flex-direction: column; /* Aligner les éléments verticalement */
+  align-items: center; /* Centrer horizontalement */
+}
+
+nav li {
+  display: none; /* Masquer les éléments de menu par défaut */
+}
+
+nav.open li {
+  display: flex; /* Afficher les éléments de menu lorsqu'ouvert */
+}
+
+#maModale {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenu {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#fermer {
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Assure que le corps prend toute la hauteur de la fenêtre */
+  margin: 0;
+ 
+}
+
+
+
+.destination {
+  position: relative; /* Positionnement pour le texte sur l'image */
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+.destination:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: none; /* Enlève l'ombre au survol */
+}
+
+.destination:hover .destination-content {
+  background-color: transparent;
+ 
+}
+
+.destination:hover .destination-content p {
+  color: transparent;
+}
+
+.destination:hover .destination-content .vtravel {
+  color: black;
+}
+
+.destination-img {
+  display: flex;
+  width: 100%;
+  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover; /* Garde le ratio de l'image */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+
+}
+.slideshow_container {
+  overflow: hidden;
+}
+ 
+
+div.scrole-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  animation: glisse 15s infinite ease;
+ 
+}
+
+
+
+@keyframes glisse {
+  0% {
+      transform: translateX(0);
+  }
+  10% {
+      transform: translateX(0);
+  }
+  20% {
+      transform: translateX(-900px); /* Première image hors de vue */
+  }
+  30% {
+      transform: translateX(-900px); /* Reste stable */
+  }
+  40% {
+      transform: translateX(-1800px); /* Deuxième image hors de vue */
+  }
+  50% {
+      transform: translateX(-1800px); /* Reste stable */
+  }
+  60% {
+      transform: translateX(-2700px); /* Troisième image hors de vue */
+  }
+  70% {
+      transform: translateX(-2700px); /* Reste stable */
+  }
+  80% {
+      transform: translateX(-3600px); /* Quatrième image hors de vue */
+  }
+  90% {
+      transform: translateX(-3600px); /* Reste stable */
+  }
+  100% {
+      transform: translateX(0); /* Retour à la première image */
+  }
+}
+
+
+.destination-content {
+  position: absolute; /* Positionnement absolu pour superposer le texte */
+  bottom: 0; /* Aligne le texte en bas */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%; /* Largeur du conteneur */
+  overflow: hidden; /* Cache les éléments qui débordent */
+}
+
+
+.scrole-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Animation lors du changement de slide */
+}
+
+.destination {
+  min-width: 25%;
+  flex: 0 0 300px; /* Largeur fixe de 300px pour chaque destination */
+  background-color: #f1f1f1; /* Ajoute une couleur de fond */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+
+
+
+.accordion {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.accordion-header {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.accordion-content {
+  background-color: #573c66;
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+div.contenu_siège {
+  display: none;
+}
+
+.seat-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #b3d7ff;
+  border: 1px solid #007bff;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.seat:hover {
+  background-color: #99c2ff;
+}
+.row {
+  display: flex;
+  justify-content: space-around; /* Pour espacer les sièges uniformément */
+  margin: 10px 0; /* Ajoute un espacement vertical entre les lignes */
+}
+.seat {
+  margin: 0 30px; /* Ajoute un espacement horizontal entre les sièges */
+}
+.spacer {
+  margin: 30px ;
+}
+
+.about {
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+  border-radius: 8px;
+  padding: 40px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+.about:hover {
+  background-color: rgba(0, 255, 255, 0.8); /* Fond bleu cyan au survol */
+}
+
+.about h2 {
+  font-size: 2em;
+  color: #2c3e50; /* Couleur du texte */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #34495e; /* Couleur du texte */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.statistics {
+  background: transparent ;
+  backdrop-filter: blur(10px); /* Flou en arrière-plan */
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center; /* Alignement centré du texte */
+  color: white; /* Couleur du texte */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour ajouter de la profondeur */
+  opacity: 0; /* Début invisible */
+  animation: fadeIn 1s forwards; /* Animation de fondu */
+}
+
+.statistics h2 {
+  font-size: 2.5em; /* Taille de police du titre */
+  margin-bottom: 30px; /* Espacement sous le titre */
+}
+
+.statistic {
+  margin: 20px 0; /* Espacement entre les statistiques */
+}
+
+.statistic h3 {
+  font-size: 1.5em; /* Taille de police pour les sous-titres */
+  margin-bottom: 10px; /* Espacement sous chaque sous-titre */
+}
+
+.number {
+  font-size: 2.5em; /* Taille de police pour les nombres */
+  font-weight: bold; /* Gras pour mettre en valeur les nombres */
+  transition: all 0.5s ease; /* Transition douce pour les animations */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* Fin visible */
+  }
+}
+.footer {
+  margin: auto;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Dégradé coloré */
+  color: white; /* Couleur du texte */
+  padding: 40px;
+  text-align: center; /* Alignement centré */
+}
+
+.footer-content h3 {
+  font-size: 2em; /* Taille de police du titre */
+  margin-bottom: 15px; /* Espacement sous le titre */
+}
+
+.footer-content p {
+  margin-bottom: 20px; /* Espacement sous le paragraphe */
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Espacement supérieur */
+}
+

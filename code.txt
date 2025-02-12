@@ -17,3 +17,60 @@
 
         
             </ul>
+
+
+html pour menu burger : 
+
+ <nav id="nav">
+            <div id="burger" class="burger"></div>
+        
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+        
+            </nav>
+        <img width="200vh" src="/images/large.png" alt="">
+        <ul class="text">
+
+        1. Comment puis-je réserver un vol ?
+
+Vous pouvez réserver un vol directement sur notre site web en utilisant notre moteur de recherche de vols. Il vous suffit de saisir votre destination, vos dates de voyage et le nombre de passagers.
+2. Quels documents sont nécessaires pour voyager ?
+
+Pour voyager, vous aurez besoin d'un passeport valide et, selon votre destination, d'un visa. Assurez-vous également d'avoir vos billets et toute documentation nécessaire pour l'enregistrement.
+3. Puis-je modifier ma réservation ?
+
+Oui, vous pouvez modifier votre réservation en vous rendant dans la section "Gérer ma réservation" sur notre site. Des frais peuvent s'appliquer selon le type de tarif que vous avez choisi.
+4. Quelles sont les politiques de bagages ?
+
+Les règles de bagages peuvent varier selon le type de billet. En général, vous pouvez enregistrer un bagage de 23 kg et emporter un bagage à main de 8 kg. Consultez notre page sur les politiques de bagages pour plus de détails.
+5. Que faire si mon vol est annulé ou retardé ?
+
+En cas d'annulation ou de retard de vol, vous serez informé par notre équipe. Nous vous proposerons des options de remboursement ou de rebooking selon les circonstances.
+6. Comment puis-je m'enregistrer pour mon vol ?
+
+Vous pouvez vous enregistrer en ligne sur notre site web 24 heures avant le départ. Vous pouvez également vous enregistrer à l'aéroport aux bornes d'enregistrement ou aux guichets.
+7. Proposez-vous des services spéciaux pour les passagers à mobilité réduite ?
+
+Oui, nous offrons des services d'assistance pour les passagers à mobilité réduite. Veuillez nous informer de vos besoins lors de la réservation ou au moins 48 heures avant le vol.
+8. Quels sont les moyens de paiement acceptés ?
+
+Nous acceptons les cartes de crédit, les cartes de débit et certains paiements électroniques. Vous pouvez consulter notre page de paiement pour la liste complète.
+9. Comment puis-je contacter le service client ?
+
+Vous pouvez nous contacter par téléphone, par e-mail ou via notre chat en direct sur le site. Nos agents sont disponibles 24/7 pour répondre à vos questions.
+10. Comment puis-je rejoindre votre programme de fidélité ?
+
+Vous pouvez vous inscrire à notre programme de fidélité en ligne sur notre site. Profitez de divers avantages, comme des miles de voyage, des surclassements et des réductions.
+
+boutton pour choix siège :
+
+  <button id="contact_box" class="contact_box" onclick="ouvrirModale()">Aide</button>
+                    <div id="maModale" style="display:none;">
+                        <div class="contenu">
+                            <span id="fermer">&times;</span>
+                            <p>Si vous rencontrez un problème</p>
+                            <button id="btnRedirection">Contactez</button>
+                        </div>
+                    </div>

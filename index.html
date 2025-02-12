@@ -7,39 +7,559 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/responsive.css">
 
 </head>
+
+
 
 <body>
 
 
     <header>
 
-        <div class="connexion">
-            <img width="160px" src="/images/large.png" alt="">
-            <ul class="text">
-            <li><a href="">Langage</a></li>
+
+        <ul>
+            <li>
+
+
+                <section class="connexion">
+                    <div>
+                        <div>
+
+                            <nav id="navbar">
+                                <div class="image_background">
+                                    <div id="burger" class="burger"> </div>
+                                </div>
+                                <ul class="menu_nav">
+                                    <li><a href="#">Accueil</a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                        </div>
+                        </nav>
+                    </div>
+                    </div>
+
+                    <div class="connexion_langage">
             <li><a href="connexion.html" target="_blank">Connexion</a></li>
-            </ul>
+            <div class="language-selector">
+                <label for="language"></label>
+                <select id="language" name="language">
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="en">🇬🇧 Anglais</option>
+                    <option value="es">🇪🇸 Espagnol</option>
+                    <option value="de">🇩🇪 Allemand</option>
+                    <option value="de">🇯🇵 Japonais</option>
+                </select>
+            </div>
+            </div>
+            </li>
+        </ul>
         </div>
 
 
 
-        <ul class="info_transports">
+        <div class="info_transports">
 
-            <li><a href="">Acheter un billet</a></li>
+            <div class="achats_billet">
+                <ul>
+                    <li>
+                        <a href="#" class="contact_link">
+                            <button class="achats_billets">Acheter un billet</button>
+                        </a>
+
+                        <div class="dropdown-content">
+                            <ul id="sous-menu">
+                                <form class="premiereclasse" id="monFormulaire">
+                                    <label for="depart">Départ de:</label>
+                                    <input type="text" id="depart" placeholder="Départ de" required>
+
+                                    <label for="date_depart">Date de voyage:</label>
+                                    <input type="date" id="date_depart" required><br>
+
+                                    <label for="arrivee">Arrivée à:</label>
+                                    <input type="text" id="arrivee" placeholder="Arrivée à" required>
+
+                                    <label for="date_arrivee">Date de retour:</label>
+                                    <input type="date" id="date_arrivee" required><br>
+
+                                    <label for="personne_type">Type de personne:</label>
+                                    <select name="Age_qualification" id="personne_type" required>
+                                        <option value="adulte">Adulte</option>
+                                        <option value="enfant">Enfant (3-16 ans)</option>
+                                        <option value="senior">Senior (+65 ans)</option>
+                                        <option value="etudiant">Étudiant (16-25 ans)</option>
+                                    </select>
+
+                                    <label for="compagny">Compagnie:</label>
+                                    <select name="Compagny" id="compagny" required>
+                                        <option value="economy">Économie</option>
+                                        <option value="business">Affaires</option>
+                                        <option value="premium">Premium</option>
+                                    </select>
+                                    <br>
+
+                                    <button type="submit" id="continuer">Continuer</button>
+                                </form>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="pop_up_seat">
+                <div id="siege" class="contenu_siege">
+                    <h3>Choisissez votre siège</h3>
+                    <div class="seat-selection">
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="1A"> 1A</label>
+                            <label><input type="radio" name="seat" value="1B"> 1B</label>
+                            <label><input type="radio" name="seat" value="1C"> 1C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="1D"> 1D</label>
+                            <label><input type="radio" name="seat" value="1E"> 1E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="1F"> 1F</label>
+                            <label><input type="radio" name="seat" value="1G"> 1G</label>
+                            <label><input type="radio" name="seat" value="1H"> 1H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="2A"> 2A</label>
+                            <label><input type="radio" name="seat" value="2B"> 2B</label>
+                            <label><input type="radio" name="seat" value="2C"> 2C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="2D"> 2D</label>
+                            <label><input type="radio" name="seat" value="2E"> 2E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="2F"> 2F</label>
+                            <label><input type="radio" name="seat" value="2G"> 2G</label>
+                            <label><input type="radio" name="seat" value="2H"> 2H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="3A"> 3A</label>
+                            <label><input type="radio" name="seat" value="3B"> 3B</label>
+                            <label><input type="radio" name="seat" value="3C"> 3C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="3D"> 3D</label>
+                            <label><input type="radio" name="seat" value="3E"> 3E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="3F"> 3F</label>
+                            <label><input type="radio" name="seat" value="3G"> 3G</label>
+                            <label><input type="radio" name="seat" value="3H"> 3H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="4A"> 4A</label>
+                            <label><input type="radio" name="seat" value="4B"> 4B</label>
+                            <label><input type="radio" name="seat" value="4C"> 4C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="4D"> 4D</label>
+                            <label><input type="radio" name="seat" value="4E"> 4E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="4F"> 4F</label>
+                            <label><input type="radio" name="seat" value="4G"> 4G</label>
+                            <label><input type="radio" name="seat" value="4H"> 4H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="5A"> 5A</label>
+                            <label><input type="radio" name="seat" value="5B"> 5B</label>
+                            <label><input type="radio" name="seat" value="5C"> 5C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="5D"> 5D</label>
+                            <label><input type="radio" name="seat" value="5E"> 5E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="5F"> 5F</label>
+                            <label><input type="radio" name="seat" value="5G"> 5G</label>
+                            <label><input type="radio" name="seat" value="5H"> 5H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="6A"> 6A</label>
+                            <label><input type="radio" name="seat" value="6B"> 6B</label>
+                            <label><input type="radio" name="seat" value="6C"> 6C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="6D"> 6D</label>
+                            <label><input type="radio" name="seat" value="6E"> 6E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="6F"> 6F</label>
+                            <label><input type="radio" name="seat" value="6G"> 6G</label>
+                            <label><input type="radio" name="seat" value="6H"> 6H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="7A"> 7A</label>
+                            <label><input type="radio" name="seat" value="7B"> 7B</label>
+                            <label><input type="radio" name="seat" value="7C"> 7C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="7D"> 7D</label>
+                            <label><input type="radio" name="seat" value="7E"> 7E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="7F"> 7F</label>
+                            <label><input type="radio" name="seat" value="7G"> 7G</label>
+                            <label><input type="radio" name="seat" value="7H"> 7H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="8A"> 8A</label>
+                            <label><input type="radio" name="seat" value="8B"> 8B</label>
+                            <label><input type="radio" name="seat" value="8C"> 8C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="8D"> 8D</label>
+                            <label><input type="radio" name="seat" value="8E"> 8E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="8F"> 8F</label>
+                            <label><input type="radio" name="seat" value="8G"> 8G</label>
+                            <label><input type="radio" name="seat" value="8H"> 8H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="9A"> 9A</label>
+                            <label><input type="radio" name="seat" value="9B"> 9B</label>
+                            <label><input type="radio" name="seat" value="9C"> 9C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="9D"> 9D</label>
+                            <label><input type="radio" name="seat" value="9E"> 9E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="9F"> 9F</label>
+                            <label><input type="radio" name="seat" value="9G"> 9G</label>
+                            <label><input type="radio" name="seat" value="9H"> 9H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="10A"> 10A</label>
+                            <label><input type="radio" name="seat" value="10B"> 10B</label>
+                            <label><input type="radio" name="seat" value="10C"> 10C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="10D"> 10D</label>
+                            <label><input type="radio" name="seat" value="10E"> 10E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="10F"> 10F</label>
+                            <label><input type="radio" name="seat" value="10G"> 10G</label>
+                            <label><input type="radio" name="seat" value="10H"> 10H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="11A"> 11A</label>
+                            <label><input type="radio" name="seat" value="11B"> 11B</label>
+                            <label><input type="radio" name="seat" value="11C"> 11C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="11D"> 11D</label>
+                            <label><input type="radio" name="seat" value="11E"> 11E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="11F"> 11F</label>
+                            <label><input type="radio" name="seat" value="11G"> 11G</label>
+                            <label><input type="radio" name="seat" value="11H"> 11H</label>
+                        </div>
+                        <div class="row">
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="12A"> 12A</label>
+                            <label><input type="radio" name="seat" value="12B"> 12B</label>
+                            <label><input type="radio" name="seat" value="12C"> 12C</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="12D"> 12D</label>
+                            <label><input type="radio" name="seat" value="12E"> 12E</label>
+                            <div class="spacer"></div>
+                            <label><input type="radio" name="seat" value="12F"> 12F</label>
+                            <label><input type="radio" name="seat" value="12G"> 12G</label>
+                            <label><input type="radio" name="seat" value="12H"> 12H</label>
+                        </div>
+
+                    </div>
+                    <div class="selected-seats">
+                        <h3>Sièges sélectionnés :</h3>
+                        <li id="selected-list"></li>
+                    </div>
+                    <button id="fermer" class="choice_box">fermer</button>
+                </div>
+            </section>
+
+
+            </a>
+            </li>
+            </ul>
+
+
+            </ul>
+
             <li><a href="">Enregistrement</a></li>
             <li><a href="">Mes réservations</a></li>
-            <li><a href="">Informations</a></li>
-            <li><a href="">Aide</a></li>
+            <li id="information"><button>Informations</button></li>
+            <ul>
+                <li>
+
+                    <button id="contact_box" class="contact_box" onclick="ouvrirModale()">Aide</button>
+                    <div id="maModale" style="display:none;">
+                        <div class="contenu">
+                            <span id="fermer">&times;</span>
+                            <p>Si vous rencontrez un problème</p>
+                            <button id="btnRedirection">Contactez</button>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
 
 
-        </ul>
 
+        </div>
+        </div>
     </header>
 
-    
+    <main class="font_site">
+
+        <div class="slideshow_container">
+            <div class="scrole-container">
+
+
+                <div class="destination">
+                    <img src="/images_destinations/paris.jpg" alt="Paris" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Paris</h2>
+                        <p class="price"><strong>470€</strong></p>
+                        <p>La ville de l'amour, connue pour ses monuments emblématiques.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/new_york.jpg" alt="New York" class="destination-img">
+                    <div class="destination-content">
+                        <h2>New York</h2>
+                        <p class="price"><strong>650€</strong></p>
+                        <p>La ville qui ne dort jamais, célèbre pour ses gratte-ciels.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/tokyo.jpg" alt="Tokyo" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Tokyo</h2>
+                        <p class="price"><strong>800€</strong></p>
+                        <p>Une métropole dynamique mêlant tradition et modernité.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/Vancouver.jpg" alt="Vancouver" class="destination-img">
+                    <div class="destination-content">
+                        <h2 class="vtravel">Vancouver</h2>
+                        <p class="price"><strong>800€</strong></p>
+                        <p>Une ville côtière entourée de montagnes, connue pour sa beauté naturelle.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/Los-Angeles.jpg" alt="Los Angeles" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Los Angeles</h2>
+                        <p class="price"><strong>920€</strong></p>
+                        <p>Une ville iconique connue pour ses plages, ses studios de cinéma et sa culture diversifiée.
+                        </p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/londres.jpg" alt="Londres" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Londres</h2>
+                        <p class="price"><strong>850€</strong></p>
+                        <p>Une ville emblématique connue pour son histoire et sa culture.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/rome.jpg" alt="Rome" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Rome</h2>
+                        <p class="price"><strong>780€</strong></p>
+                        <p>La capitale italienne, célèbre pour ses monuments anciens.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/Barcelone.jpg" alt="Barcelone" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Barcelone</h2>
+                        <p class="price"><strong>820€</strong></p>
+                        <p>Une ville vivante avec une architecture unique et des plages magnifiques.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/sydney.jpg" alt="Sydney" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Sydney</h2>
+                        <p class="price"><strong>900€</strong></p>
+                        <p>Une métropole australienne célèbre pour son opéra et ses plages.</p>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <img src="/images_destinations/Bangkok.webp" alt="Bangkok" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Bangkok</h2>
+                        <p class="price"><strong>750€</strong></p>
+                        <p>Une ville vibrante connue pour sa cuisine de rue et ses temples.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="/images_destinations/cape-town.jpg" alt="Cape Town" class="destination-img">
+                    <div class="destination-content">
+                        <h2>Cape Town</h2>
+                        <p class="price"><strong>950€</strong></p>
+                        <p>Une ville côtière d'Afrique du Sud avec des paysages époustouflants.</p>
+                    </div>
+                </div>
+
+
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <section class="statistics">
+            <h2>Statistiques de Vol</h2>
+            <div class="statistic">
+                <h3>Nombre de vols annuels</h3>
+                <p class="number" data-count="15000">0</p>
+            </div>
+            <div class="statistic">
+                <h3>Nombre de passagers mensuels</h3>
+                <p class="number" data-count="120000">0</p>
+            </div>
+            <div class="statistic">
+                <h3>Destinations desservies</h3>
+                <p class="number" data-count="75">0</p>
+            </div>
+            <div class="statistic">
+                <h3>Évaluations de satisfaction</h3>
+                <p class="number" data-count="4.8">0</p>
+            </div>
+        </section>
+
+
+
+        <section class="about">
+            <h2>À propos de Graven Airlines</h2>
+            <p>Graven Airlines est une compagnie aérienne internationale dédiée à offrir une expérience de voyage
+                inégalée. Fondée en 2023, nous nous engageons à relier des destinations du monde entier tout en
+                garantissant le confort et la sécurité de nos passagers.</p>
+            <p>Notre flotte moderne et respectueuse de l'environnement, combinée à un service à la clientèle
+                exceptionnel, fait de chaque vol une expérience mémorable. Que vous voyagiez pour le travail ou le
+                loisir, Graven Airlines vous offre des horaires flexibles, des tarifs compétitifs et des commodités de
+                premier ordre.</p>
+            <p>Rejoignez-nous pour explorer le monde, une destination à la fois, et découvrez la différence Graven
+                Airlines.</p>
+        </section>
+
+
+
+
+        <section>
+
+
+            <div id="accordion" class="accordion">
+                <h5 class="accordion-header">
+                    1. Comment puis-je réserver un vol ?</h5>
+                <div class="accordion-content">
+                    <p>Vous pouvez réserver un vol directement sur notre site web en utilisant notre moteur de recherche
+                        de vols. Il vous suffit de saisir votre destination, vos dates de voyage et le nombre de
+                        passagers.
+                    </p>
+                </div>
+                <h5 class="accordion-header">2. Quels documents sont nécessaires pour voyager ?</h5>
+                <div class="accordion-content">
+                    <p>Pour voyager, vous aurez besoin d'un passeport valide et, selon votre destination, d'un visa.
+                        Assurez-vous également d'avoir vos billets et toute documentation nécessaire pour
+                        l'enregistrement.</p>
+                </div>
+                <h5 class="accordion-header">3. Puis-je modifier ma réservation ?</h5>
+                <div class="accordion-content">
+                    <p>Oui, vous pouvez modifier votre réservation en vous rendant dans la section "Gérer ma
+                        réservation" sur notre site. Des frais peuvent s'appliquer selon le type de tarif que vous avez
+                        choisi.</p>
+                </div>
+                <h5 class="accordion-header">4. Quelles sont les politiques de bagages ?</h5>
+                <div class="accordion-content">
+                    <p>Les règles de bagages peuvent varier selon le type de billet. En général, vous pouvez enregistrer
+                        un bagage de 23 kg et emporter un bagage à main de 8 kg. Consultez notre page sur les politiques
+                        de bagages pour plus de détails.</p>
+                </div>
+                <h5 class="accordion-header">5. Que faire si mon vol est annulé ou retardé ?</h5>
+                <div class="accordion-content">
+                    <p>En cas d'annulation ou de retard de vol, vous serez informé par notre équipe. Nous vous
+                        proposerons des options de remboursement ou de rebooking selon les circonstances.</p>
+                </div>
+                <h5 class="accordion-header">6. Comment puis-je m'enregistrer pour mon vol ?</h5>
+                <div class="accordion-content">
+                    <p>Vous pouvez vous enregistrer en ligne sur notre site web 24 heures avant le départ. Vous pouvez
+                        également vous enregistrer à l'aéroport aux bornes d'enregistrement ou aux guichets.</p>
+                </div>
+                <h5 class="accordion-header">7. Proposez-vous des services spéciaux pour les passagers à mobilité
+                    réduite ?</h5>
+                <div class="accordion-content">
+                    <p>Oui, nous offrons des services d'assistance pour les passagers à mobilité réduite. Veuillez nous
+                        informer de vos besoins lors de la réservation ou au moins 48 heures avant le vol.</p>
+                </div>
+                <h5 class="accordion-header">8. Quels sont les moyens de paiement acceptés ?</h5>
+                <div class="accordion-content">
+                    <p>Nous acceptons les cartes de crédit, les cartes de débit et certains paiements électroniques.
+                        Vous pouvez consulter notre page de paiement pour la liste complète.</p>
+                </div>
+                <h5 class="accordion-header">9. Comment puis-je contacter le service client ?</h5>
+                <div class="accordion-content">
+                    <p>Vous pouvez nous contacter par téléphone, par e-mail ou via notre chat en direct sur le site. Nos
+                        agents sont disponibles 24/7 pour répondre à vos questions.</p>
+                </div>
+                <h5 class="accordion-header">10. Comment puis-je rejoindre votre programme de fidélité ?</h5>
+                <div class="accordion-content">
+                    <p>Vous pouvez vous inscrire à notre programme de fidélité en ligne sur notre site. Profitez de
+                        divers avantages, comme des miles de voyage, des surclassements et des réductions.</p>
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Graven Airlines</h3>
+            <p>Votre compagnon de voyage depuis 2023</p>
+            <p>Contactez-nous : <strong>info@gravenairlines.com</strong></p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Graven Airlines. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('monFormulaire').addEventListener('submit', function (event) {
+            event.preventDefault(); // Empêche le rafraîchissement de la page
+            // Récupération des valeurs des champs
+            const depart = document.getElementById('depart').value;
+            const dateDepart = document.getElementById('date_depart').value;
+            const arrivee = document.getElementById('arrivee').value;
+            const dateArrivee = document.getElementById('date_arrivee').value;
+            const typePersonne = document.getElementById('personne_type').value;
+            const compagnie = document.getElementById('compagny').value;
+
+            // Traitement des données
+            alert(`Billet demandé:\nDépart: ${depart}\nDate de départ: ${dateDepart}\nArrivée: ${arrivee}\nDate de retour: ${dateArrivee}\nType: ${typePersonne}\nCompagnie: ${compagnie}`);
+
+            // Ici, tu peux ajouter le code pour envoyer les données à un serveur
+        });
+    </script>
+    <script src="/Js/script/slide.js"></script>
+    <script src="/Js/script/nav.js"></script>
+    <script src="/Js/script/pop_up.js"></script>
+    <script src="/Js/script/animation.js"></script>
+
+
 </body>
+
+
 
 </html>
